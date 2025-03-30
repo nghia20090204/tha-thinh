@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>Anh Cube</title>
+</head>
+
+<body>
+	<div class="title">
+		My Love
+	</div>
+	<div class="cube">
+		
+		<div class="outer-cube">
+			<div class="outer-top">
+				<img src="./images/a1.gif" />
+			</div>
+			<div class="outer-bottom">
+				<img src="./images/a2.gif" />
+			</div>
+			<div class="outer-front">
+				<img src="./images/a3.gif" />
+			</div>
+			<div class="outer-back">
+				<img src="./images/a4.gif" />
+			</div>
+			<div class="outer-left">
+				<img src="./images/a5.gif" />
+			</div>
+			<div class="outer-right">
+				<img src="./images/a6.gif" />
+			</div>
+		</div>
+		
+		<div class="inner-cube">
+			<div class="inner-top">
+				<img src="./images/a1.gif" />
+			</div>
+			<div class="inner-bottom">
+				<img src="./images/a2.gif" />
+			</div>
+			<div class="inner-front">
+				<img src="./images/a3.gif" />
+			</div>
+			<div class="inner-back">
+				<img src="./images/a4.gif" />
+			</div>
+			<div class="inner-left">
+				<img src="./images/a5.gif" />
+			</div>
+			<div class="inner-right">
+				<img src="./images/a6.gif" />
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		<div class="message">
+			<div class="tip">
+				Này em
+			</div>
+		</div>
+	</div>
+
+</body>
+<script>
+    const messages = [
+		"Đi đi em do dự trời tối mất",
+        "Cười đi em ủ rũ ngày trôi mất",
+        "Tin đi đừng để lòng thêm khổ",
+        "Nói đi em im lặng duyên không chờ ",
+		"Yêu đi em sợ hãi ta mất nhau",
+    ];
+
+    let currentIndex = 0;
+
+    function changeMessage() {
+        const tipElement = document.querySelector(".tip");
+        tipElement.textContent = messages[currentIndex];
+        
+        currentIndex = (currentIndex + 1) % messages.length;
+    }
+
+    setInterval(changeMessage, 4000);
+</script>
+
+</html>
